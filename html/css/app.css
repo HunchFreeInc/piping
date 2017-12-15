@@ -305,5 +305,18 @@ p.card-description {
 
 .footer-menu {
   background: #333333;
+  color: #fefefe;
+  padding: 2rem 0;
+}
+
+.footer-menu h2 {
+  font-size: 1.35rem;
+}
+
+.footer-menu a {
+    line-height: inherit;
+    color: #7d7d7d;
+    text-decoration: none;
+    cursor: pointer;
 }
 
