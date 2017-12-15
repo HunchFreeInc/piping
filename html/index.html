@@ -12,12 +12,13 @@
     <link rel="stylesheet" href="css/app.css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
     <link href="https://use.fontawesome.com/releases/v5.0.1/css/all.css" rel="stylesheet">
+    <script src="js/modernizr.custom.js"></script>
 
   </head>
 
   <body>
 
-    <div class="sticky">
+    <div class="sticky desktop">
 
       <div class="grid-container-expanded utility">
         
@@ -48,7 +49,11 @@
           
             <div class="large-3 cell">
 
-              <img class="logo" alt="Piping and Equipment Logo" src="img/logo.png" />
+              <div class="logo">
+	           
+	              <img alt="Piping and Equipment Logo" src="img/logo.png" />
+
+	          </div>
 
             </div>
 
@@ -146,6 +151,36 @@
 
     </div>
 
+    <div class="sticky mobile">
+    	
+    	<section class="nav">
+      	
+      		<div class="grid-container">
+        
+        		<div class="grid-x grid-margin-x align-middle">
+          			
+          			<div class="small-8 cell">
+            		
+            			<div class="logo">
+              			
+              				<a href="#"><img src="img/logo.png"/></a>
+            			
+            			</div>
+          			
+          			</div>
+          			
+          		<div class="columns small-4 text-right">  
+            		
+            		<button id="trigger-overlay" type="button"><i class="fa fa-bars fa-2x" aria-hidden="true"></i></button>
+          		
+          		</div>
+        	
+        	</div>
+      	
+      	</section>
+    
+    </div>
+
     <!-- Hero -->
 
     <div class="grid-container">
@@ -170,7 +205,7 @@
 
     <div class="grid-container box-pad">
       
-      <div class="grid-x grid-margin-x small-up-1 medium-up-2 large-up-3">
+      <div class="grid-x grid-margin-x small-up-1 medium-up-3 large-up-3">
       
         <div class="cell">
             
@@ -392,8 +427,6 @@
 
         	<h2>Products</h2>
 
-            <div class="sep"></div>
-
           	<div class="grid-x small-up-1 medium-up-2">
 
             	<div class="cell">
@@ -466,16 +499,20 @@
 
         </div>
 
-          <div class="large-3 medium-5 small-12 cell medium-text-left text-center top-border-white">
-
+        <div class="large-3 medium-5 small-12 cell medium-text-left text-center top-border-white">
 
           	<h2>Piping and Equipment</h2>
             <p>9100 Canniff St<br />
 			   Houston, TX 77017</p>
-            <p><i class="fas fa-phone-square"></i> 888-889-9683</p>
+            <p><i class="fas fa-phone-square"></i> <a href="/">888-889-9683</a></p>
+
+            <a href="#" class="menu-link foot-link">Corporate Info</a><br/>
+            <a href="#" class="menu-link foot-link">Private Equity</a><br/>
+            <a href="#" class="menu-link foot-link">Contact Us</a><br/>
 
 
-          </div>
+
+        </div>
 
         </div>
 
@@ -507,9 +544,6 @@
 
     </section>
 
-    
-
-
 
     <div class="overlay overlay-hugeinc">
 
@@ -524,12 +558,11 @@
         <ul>
 
           <li><a href="#">Solutions</a></li>
-          <li><a href="#">Features</a></li>
-          <li><a href="#">Pricing</a></li>
-          <li><a href="#">FAQs</a></li>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Blog</a></li>
-          <li><a href="#">Contact</a></li>
+          <li><a href="#">Markets</a></li>
+          <li><a href="#">Products</a></li>
+          <li><a href="#">Private Equity</a></li>
+          <li><a href="#">Corporate Info</a></li>
+          <li><a href="#">Contact Us</a></li>
 
         </ul>
 
@@ -537,6 +570,8 @@
 
     </div>
 
+    <script src="js/classie.js"></script> 
+    <script src="js/demo1.js"></script> 
     <script src="js/vendor/jquery.js"></script>
     <script src="js/vendor/what-input.js"></script>
     <script src="js/vendor/foundation.js"></script>
