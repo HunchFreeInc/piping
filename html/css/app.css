@@ -2,6 +2,7 @@ body {
     color: #333333;
     background: #efefef;
     padding-top: 12.5rem;
+    overflow-x: hidden;
 }
 
 .red-bg {
@@ -230,6 +231,7 @@ li.is-submenu-item.is-dropdown-submenu-item:hover {
 
 li.is-submenu-item.is-dropdown-submenu-item a {
     color: #fefefe;
+    text-transform: none;
 }
 
 li.is-submenu-item.is-dropdown-submenu-item a:hover {
@@ -467,5 +469,15 @@ p.card-description {
 
 .footer-menu a:hover, .footer-menu a:focus, .footer-menu a:active  {
     color: #cecece;
+}
+
+.footer-menu img {
+  width: 250px;
+  height: auto;
+  margin-bottom: 1rem;
+}
+
+.footer-menu p.small-p {
+  font-size: 0.85rem;
 }
 
