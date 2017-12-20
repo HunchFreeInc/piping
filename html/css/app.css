@@ -213,7 +213,7 @@ body {
     border-color: #a92231 transparent transparent;
 }
 
-.dropdown-menu .is-active a {
+.dropdown-menu-submenu-parent .is-active > a {
 	color: #232323;
 }
 
