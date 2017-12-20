@@ -484,7 +484,7 @@ p.card-description {
 
 
 .careers-bg {
-  background: url('../img/careers.jpg');
+  background: url('../img/careers-bw.jpg');
   background-size: cover;
   height: 325px;
   position: relative;
@@ -527,3 +527,49 @@ p.card-description {
   opacity: 0.85;
   z-index: 1;
 }
+
+.contact-bg {
+  background: url('../img/pipes.jpg');
+  background-size: cover;
+  height: 325px;
+  position: relative;
+  z-index: 0;
+}
+
+.contact-bg:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background: #a92231;
+  opacity: 0.85;
+  z-index: 1;
+}
+
+.contact-box h3 {
+  font-size: 24px;
+}
+
+.about-bg {
+  background: url('../img/team.jpg');
+  background-size: cover;
+  height: 325px;
+  position: relative;
+  z-index: 0;
+}
+
+.about-bg:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background: #a92231;
+  opacity: 0.85;
+  z-index: 1;
+}
+
+
