@@ -21,171 +21,67 @@
     <div class="sticky desktop">
 
       <div class="grid-container-expanded utility">
-        
+
         <div class="grid-x text-right">
-        
+
           <div class="large-12 cell">
-        
+
             <ul class="menu align-right">
 
               <li><a href="our-story.html" class="white-text">Our Story</a></li>
               <li><a href="careers.html" class="white-text">Careers</a></li>
               <li class="red-bg"><a href="contact.html">Contact Us</a></li>
-            
+
             </ul>
-        
+
           </div>
-        
+
         </div>
-      
+
       </div>
 
-      <!-- Main Nav -->
-
-      <section class="nav">
-
-        <div class="grid-container">
-          
-          <div class="grid-x align-middle">
-          
-            <div class="large-3 cell">
-
-              <div class="logo">
-             
-                <a href="index.html"><img alt="Piping and Equipment Logo" src="img/logo.png" /></a>
-
-            </div>
-
-            </div>
-
-            <div class="large-9 cell">
-          
-              <ul class="dropdown menu align-right" data-dropdown-menu>
-
-                <li>
-
-                  <a href="#">Solutions</a>
-
-                  <ul class="menu">
-
-                        <li><a href="#">Pipes, Valves, & Fittings</a></li>
-
-                        <li><a href="#">Tool Cribs & Vending</a></li>
-
-                        <li><a href="#">Midstream Transmission & Gathering Systems</a></li>
-
-                        <li><a href="#">Automation</a></li>
-
-                        <li><a href="#">Petroleum Refining, Petrochemical, Chemical Processing, & Utility Projects & Turnarounds</a></li>
-
-                  </ul>
-
-                </li>
-                
-                <li>
-
-                  <a href="#">Markets</a>
-
-                  <ul class="menu">
-
-                    <li><a href="#">Chemical Processing</a></li>
-
-                    <li><a href="#">Drilling</a></li>
-
-                    <li><a href="#">Exploration & Production</a></li>
-
-                    <li><a href="#">Industrial Manufacturing</a></li>
-
-                    <li><a href="#">Midstream</a></li>
-
-                    <li><a href="#">Refining & Petrochemical</a></li>
-
-                    <li><a href="#">Utilities & Gas Distribution</a></li>
-
-                  </ul>
-
-                </li>
-
-                <li>
-
-                  <a href="#">Products</a>
-
-                  <ul class="menu">
-
-                    <li><a href="#">Bearings & Power Transmission</a></li>
-
-                    <li><a href="#">Electrical</a></li>
-
-                    <li><a href="#">General Industrial</a></li>
-
-                    <li><a href="#">Industrial Rubber</a></li>
-
-                    <li><a href="#">Material Handling</a></li>
-
-                    <li><a href="#">Mining</a></li>
-
-                    <li><a href="#">Pipe, Valves, & Fittings</a></li>
-
-                    <li><a href="#">Safety</a></li>
-
-                    <li><a href="#">Specialty Items</a></li>
-
-                    <li><a href="#">Transportation Products</a></li>
-
-                    <li><a href="#">Valve Automation</a></li>
-
-                  </ul>
-
-                </li>
-              
-              </ul>
-          
-            </div>
-          
-          </div>
-        
-        </div>
-
-      </section>
+        <?php
+        include 'navigation.php';
+        ?>
 
     </div>
 
     <div class="sticky mobile">
-      
+
       <section class="nav">
-        
+
           <div class="grid-container">
-        
+
             <div class="grid-x grid-margin-x align-middle">
-                
+
                 <div class="small-8 cell">
-                
+
                   <div class="logo">
-                    
+
                       <a href="index.html"><img src="img/logo.png"/></a>
-                  
+
                   </div>
-                
+
                 </div>
-                
-              <div class="columns small-4 text-right">  
-                
+
+              <div class="columns small-4 text-right">
+
                 <button id="trigger-overlay" type="button"><i class="fa fa-bars fa-2x" aria-hidden="true"></i></button>
-              
+
               </div>
-          
+
           </div>
-        
+
         </section>
-    
+
     </div>
 
     <!-- Header -->
 
     <div class="grid-container">
-      
+
       <div class="grid-x grid-margin-x header about-bg align-bottom">
-      
+
         <div class="large-6 cell content white-text top-border-white">
 
           <h1>Our Story</h1>
@@ -193,9 +89,9 @@
           <p>Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Curabitur aliquet quam id dui posuere blandit. Curabitur non nulla.</p>
 
         </div>
-      
+
       </div>
-    
+
     </div>
 
     <!-- Markets -->
@@ -203,9 +99,9 @@
     <section class="white-bg">
 
       <div class="grid-container">
-        
+
         <div class="grid-x grid-margin-x grid-margin-y align-middle">
-        
+
           <div class="cell small-12 medium-6 large-6 top-border medium-order-2">
 
             <h2>Title to Section</h2>
@@ -225,33 +121,33 @@
           </div>
 
         </div>
-      
+
       </div>
 
     </section>
 
     <div class="grid-container box-pad">
-      
+
       <div class="grid-x grid-margin-x small-up-1 medium-up-3 large-up-3">
-      
+
         <div class="cell">
-            
+
           <a href="#">
-            
+
             <div class="card" style="background: url('img/midstream.jpg'); background-size: cover;">
-            
+
               <div class="card-content">
-            
+
                 <h2 class="card-title">Hotlink</h2>
 
                 <p>Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus.</p>
-            
+
                 <p class="card-description button">Learn more</p>
-            
+
               </div>
-            
+
             </div>
-          
+
           </a>
 
         </div>
@@ -259,21 +155,21 @@
         <div class="cell">
 
           <a href="#">
-            
+
             <div class="card" style="background: url('img/refinery-petrochemical.jpg'); background-size: cover;">
-            
+
               <div class="card-content">
-            
+
                 <h2 class="card-title">Hotlink</h2>
 
                 <p>Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus.</p>
-            
+
                 <p class="card-description button">Learn more</p>
-            
+
               </div>
-            
+
             </div>
-          
+
           </a>
 
         </div>
@@ -281,27 +177,27 @@
         <div class="cell home-box">
 
           <a href="#">
-            
+
             <div class="card" style="background: url('img/industrial.jpg'); background-size: cover;">
-            
+
               <div class="card-content">
-            
+
                 <h2 class="card-title">Hotlink</h2>
 
                 <p>Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus.</p>
-            
+
                 <p class="card-description button">Learn more</p>
-            
+
               </div>
-            
+
             </div>
-          
+
           </a>
 
         </div>
-      
+
       </div>
-    
+
     </div>
 
     <!-- Footer -->
@@ -385,9 +281,9 @@
     <section class="footer">
 
       <div class="grid-container">
-        
+
         <div class="grid-x grid-margin-x grid-margin-y align-middle">
-        
+
           <div class="cell large-6 text-center medium-text-left">
 
             <p>© 2018 Piping and Equipment. All Rights Reserved.</p>
@@ -399,9 +295,9 @@
             <a href="https://hunchfree.com" target="_blank"><img src="img/hf-logo.png"/></a>
 
           </div>
-        
+
         </div>
-      
+
       </div>
 
     </section>
@@ -431,8 +327,8 @@
 
     </div>
 
-    <script src="js/classie.js"></script> 
-    <script src="js/demo1.js"></script> 
+    <script src="js/classie.js"></script>
+    <script src="js/demo1.js"></script>
     <script src="js/vendor/jquery.js"></script>
     <script src="js/vendor/what-input.js"></script>
     <script src="js/vendor/foundation.js"></script>
