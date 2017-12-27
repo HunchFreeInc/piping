@@ -18,63 +18,9 @@
 
   <body>
 
-    <div class="sticky desktop">
-
-      <div class="grid-container-expanded utility">
-
-        <div class="grid-x text-right">
-
-          <div class="large-12 cell">
-
-            <ul class="menu align-right">
-
-              <li><a href="our-story.html" class="white-text">Our Story</a></li>
-              <li><a href="careers.html" class="white-text">Careers</a></li>
-              <li class="red-bg"><a href="contact.html">Contact Us</a></li>
-
-            </ul>
-
-          </div>
-
-        </div>
-
-      </div>
-
         <?php
         include 'navigation.php';
         ?>
-
-    </div>
-
-    <div class="sticky mobile">
-
-      <section class="nav">
-
-          <div class="grid-container">
-
-            <div class="grid-x grid-margin-x align-middle">
-
-                <div class="small-8 cell">
-
-                  <div class="logo">
-
-                      <a href="index.html"><img src="img/logo.png"/></a>
-
-                  </div>
-
-                </div>
-
-              <div class="columns small-4 text-right">
-
-                <button id="trigger-overlay" type="button"><i class="fa fa-bars fa-2x" aria-hidden="true"></i></button>
-
-              </div>
-
-          </div>
-
-        </section>
-
-    </div>
 
     <!-- Header -->
 
