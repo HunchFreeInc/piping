@@ -22,149 +22,223 @@
         include 'navigation.php';
         ?>
 
-    <!-- Hero -->
+    <!-- Header -->
 
     <div class="grid-container">
-      
-      <div class="grid-x grid-margin-x hero align-right text-right align-bottom">
-      
+
+      <div class="grid-x grid-margin-x header contact-bg align-bottom">
+
         <div class="large-6 cell content white-text top-border-white">
 
-          <h1>Featured Focus Area</h1>
+          <h1>Solutions</h1>
 
-          <p>Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Quisque velit nisi, pretium ut lacinia in, elementum id enim.</p>
-
-          <a href="#" class="button red">Find out More</a>
+          <p>Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Curabitur aliquet quam id dui posuere blandit. Curabitur non nulla.</p>
 
         </div>
-      
+
       </div>
-    
+
     </div>
 
     <!-- Markets -->
 
-    <div class="grid-container box-pad">
-      
-      <div class="grid-x grid-margin-x small-up-1 medium-up-3 large-up-3">
-      
-        <div class="cell">
-            
-          <a href="">
-            
-            <div class="card" style="background: url('img/midstream.jpg'); background-size: cover;">
-            
-              <div class="card-content">
-            
-                <h2 class="card-title">Midstream</h2>
-
-                <p>Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus.</p>
-            
-                <p class="card-description button">Learn more</p>
-            
-              </div>
-            
-            </div>
-          
-          </a>
-
-        </div>
-
-        <div class="cell">
-
-          <a href="">
-            
-            <div class="card" style="background: url('img/refinery-petrochemical.jpg'); background-size: cover;">
-            
-              <div class="card-content">
-            
-                <h2 class="card-title">Refinery & Petrochemical</h2>
-
-                <p>Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus.</p>
-            
-                <p class="card-description button">Learn more</p>
-            
-              </div>
-            
-            </div>
-          
-          </a>
-
-        </div>
-
-        <div class="cell home-box">
-
-          <a href="">
-            
-            <div class="card" style="background: url('img/industrial.jpg'); background-size: cover;">
-            
-              <div class="card-content">
-            
-                <h2 class="card-title">Industrial</h2>
-
-                <p>Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus.</p>
-            
-                <p class="card-description button">Learn more</p>
-            
-              </div>
-            
-            </div>
-          
-          </a>
-
-        </div>
-      
-      </div>
-    
-    </div>
-
     <section class="white-bg">
 
       <div class="grid-container">
-        
-        <div class="grid-x grid-margin-x align-middle">
-        
-          <div class="cell small-12 medium-4 large-6 top-border">
 
-            <h2>Pipes, Valves, & Fittings</h2>
+        <div class="grid-x grid-margin-x grid-margin-y align-middle">
 
-            <p>Donec rutrum congue leo eget malesuada. Donec sollicitudin molestie malesuada. Pellentesque in ipsum id orci porta dapibus.</p>
+          <div class="cell small-12 medium-6 large-6 top-border medium-order-2">
 
-            <a href="#" class="button red">Learn more</a>
+            <h2>Title to Section</h2>
 
-          </div>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Donec rutrum congue leo eget malesuada. Nulla quis lorem ut libero malesuada feugiat. Pellentesque in ipsum id orci porta dapibus.</p>
 
-          <div class="cell small-12 medium-8 large-6">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Donec rutrum congue leo eget malesuada. Nulla quis lorem ut libero malesuada feugiat. Pellentesque in ipsum id orci porta dapibus.</p>
 
-            <img src="img/pipes.jpg"/>
+            <p>Proin eget tortor risus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui.</p>
 
           </div>
 
-        </div>
+          <div class="cell small-12 medium-6 large-6 medium-order-1">
 
-        <div class="grid-x grid-margin-x align-middle top-pad">
-
-          <div class="cell small-12 medium-8 large-6 small-order-2 medium-order-1">
-
-            <img src="img/team.jpg"/>
-
-          </div>
-
-          <div class="cell small-12 medium-4 large-6 top-border small-order-1 medium-order-2">
-
-            <h2>Our Story</h2>
-
-            <p>Donec rutrum congue leo eget malesuada. Donec sollicitudin molestie malesuada. Pellentesque in ipsum id orci porta dapibus.</p>
-
-            <a href="our-story.html" class="button red">Learn more</a>
+            <img src="img/pipes.jpg">
 
           </div>
 
         </div>
-      
+
       </div>
 
     </section>
+
+    <div class="grid-container box-pad">
+
+      <div class="grid-x grid-margin-x small-up-1 medium-up-3 large-up-3 align-center">
+
+        <div class="cell">
+
+          <a href="#">
+
+            <div class="card" style="background: url('img/midstream.jpg'); background-size: cover;">
+
+              <div class="card-content">
+
+                <h2 class="card-title">Pipes, Valves, & Fittings</h2>
+
+                <p class="card-description button">Learn more</p>
+
+              </div>
+
+            </div>
+
+          </a>
+
+        </div>
+
+        <div class="cell">
+
+          <a href="#">
+
+            <div class="card" style="background: url('img/midstream.jpg'); background-size: cover;">
+
+              <div class="card-content">
+
+                <h2 class="card-title">Tool Cribs & Vending</h2>
+
+                <p class="card-description button">Learn more</p>
+
+              </div>
+
+            </div>
+
+          </a>
+
+        </div>
+
+        <div class="cell">
+
+          <a href="#">
+
+            <div class="card" style="background: url('img/midstream.jpg'); background-size: cover;">
+
+              <div class="card-content">
+
+                <h2 class="card-title">Midstream Transmission & Gathering Systems</h2>
+
+                <p class="card-description button">Learn more</p>
+
+              </div>
+
+            </div>
+
+          </a>
+
+        </div>
+
+        <div class="cell">
+
+          <a href="#">
+
+            <div class="card" style="background: url('img/midstream.jpg'); background-size: cover;">
+
+              <div class="card-content">
+
+                <h2 class="card-title">Automation</h2>
+
+                <p class="card-description button">Learn more</p>
+
+              </div>
+
+            </div>
+
+          </a>
+
+        </div>
+
+        <div class="cell">
+
+          <a href="#">
+
+            <div class="card" style="background: url('img/midstream.jpg'); background-size: cover;">
+
+              <div class="card-content">
+
+                <h2 class="card-title">Petroleum Refining</h2>
+
+                <p class="card-description button">Learn more</p>
+
+              </div>
+
+            </div>
+
+          </a>
+
+        </div>
+
+        <div class="cell">
+
+          <a href="#">
+
+            <div class="card" style="background: url('img/midstream.jpg'); background-size: cover;">
+
+              <div class="card-content">
+
+                <h2 class="card-title">Petrochemical</h2>
+
+                <p class="card-description button">Learn more</p>
+
+              </div>
+
+            </div>
+
+          </a>
+
+        </div>
+
+        <div class="cell">
+
+          <a href="#">
+
+            <div class="card" style="background: url('img/midstream.jpg'); background-size: cover;">
+
+              <div class="card-content">
+
+                <h2 class="card-title">Chemical Processing</h2>
+
+                <p class="card-description button">Learn more</p>
+
+              </div>
+
+            </div>
+
+          </a>
+
+        </div>
+
+        <div class="cell">
+
+          <a href="#">
+
+            <div class="card" style="background: url('img/midstream.jpg'); background-size: cover;">
+
+              <div class="card-content">
+
+                <h2 class="card-title">Utility Projects & Turnarounds</h2>
+
+                <p class="card-description button">Learn more</p>
+
+              </div>
+
+            </div>
+
+          </a>
+
+        </div>
+
+      </div>
+
+    </div>
 
     <!-- Footer -->
 
@@ -231,9 +305,9 @@
 
           <div class="large-4 medium-4 small-12 cell medium-text-left text-center top-border-white">
 
-          	<h2>Contact Information</h2>
+            <h2>Contact Information</h2>
             <p>9100 Canniff St<br />
-			   Houston, TX 77017</p>
+         Houston, TX 77017</p>
             <p><i class="fas fa-phone-square"></i> <a href="/">888-889-9683</a></p>
 
           </div>
@@ -247,9 +321,9 @@
     <section class="footer">
 
       <div class="grid-container">
-        
+
         <div class="grid-x grid-margin-x grid-margin-y align-middle">
-        
+
           <div class="cell large-6 text-center medium-text-left">
 
             <p>© 2018 Piping and Equipment. All Rights Reserved.</p>
@@ -261,9 +335,9 @@
             <a href="https://hunchfree.com" target="_blank"><img src="img/hf-logo.png"/></a>
 
           </div>
-        
+
         </div>
-      
+
       </div>
 
     </section>
@@ -293,8 +367,8 @@
 
     </div>
 
-    <script src="js/classie.js"></script> 
-    <script src="js/demo1.js"></script> 
+    <script src="js/classie.js"></script>
+    <script src="js/demo1.js"></script>
     <script src="js/vendor/jquery.js"></script>
     <script src="js/vendor/what-input.js"></script>
     <script src="js/vendor/foundation.js"></script>
