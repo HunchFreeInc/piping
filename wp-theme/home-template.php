@@ -65,15 +65,13 @@ try {
 
 			<div class="grid-container">
 			  
-			  <div class="grid-x grid-margin-x hero align-right text-right align-bottom" style="background: url(' {$header_img_url} ');">
+			  <div class="grid-x grid-margin-x hero align-center text-center align-middle" style="background: url(' {$header_img_url} '); background-size: cover; background-position: center center;">
 			  
-			    <div class="large-6 cell content white-text top-border-white">
+			    <div class="large-8 medium-10 small-12 cell content white-text">
 
 			      <h1>{$header_title}</h1>
 
 			      <p>{$header_body_text}</p>
-
-			      <a href="{$header_button_link}" class="button red">{$header_button_text}</a>
 
 			    </div>
 			  
@@ -112,11 +110,11 @@ HTML;
 
 							$content_cards .= <<<HTML
 
-							<div class="cell">
+							<div class="cell text-center">
 							    
-							  <a href="{$card_button_link}">
+							  <!--<a href="{$card_button_link}">-->
 							    
-							    <div class="card" style="background: url('{$card_img_url}'); background-size: cover;">
+							    <div class="card no-hover" style="background: url('{$card_img_url}'); background-size: cover;">
 							    
 							      <div class="card-content">
 							    
@@ -124,13 +122,13 @@ HTML;
 
 							        <p>{$card_body_text}</p>
 							    
-							        <p class="card-description button">Learn more</p>
+							        <!-- <p class="card-description button">Learn more</p> -->
 							    
 							      </div>
 							    
 							    </div>
 							  
-							  </a>
+							  <!--</a>-->
 
 							</div>
 
@@ -156,6 +154,46 @@ HTML;
       			</div>
 
       		</div>
+
+HTML;
+
+			###
+			### Mission Statement Block
+			###
+			if( have_rows('mission_statement_block') ){
+
+				while( have_rows('mission_statement_block') ){
+					the_row();
+
+
+					$mission_statement_title = get_sub_field('mission_statement_title');
+					$mission_statement_copy = get_sub_field('mission_statement_copy');
+
+				}
+
+			}
+
+			$mission_statement_block = <<<HTML
+
+			<section class="dk-bg normal-pad">
+
+      			<div class="grid-container">
+
+      				<div class="grid-x grid-margin-x align-center">
+
+      					<div class="cell large-8 medium-10 small-12 text-center">
+
+      						<h2 class="mission-statement">{$mission_statement_title}</h2>
+
+      						<p class="mission-statement">{$mission_statement_copy}</p>
+
+      					</div>
+
+      				</div>
+
+      			</div>
+
+      		</section>
 
 HTML;
 
@@ -191,15 +229,15 @@ HTML;
 
 							$content .= <<<HTML
 
-							<div class="grid-x grid-margin-x align-middle top-pad">
+							<div class="grid-x grid-margin-x grid-margin-y align-center top-pad">
 
-          						<div class="cell small-12 medium-8 large-6 small-order-2 medium-order-1">
+          						<div class="cell small-12 medium-10 large-6 medium-order-2 large-order-1">
 
-            						<img src="{$content_img_url}"/>
+            						<img src="{$content_img_url}" alt="{$content_img_alt}"/>
 
           						</div>
 
-          						<div class="cell small-12 medium-4 large-6 top-border small-order-1 medium-order-2">
+          						<div class="cell small-12 medium-10 large-6 top-border small-order-1 medium-order-2">
 
             						<h2>{$content_title}</h2>
 
@@ -217,9 +255,9 @@ HTML;
 
 							$content .= <<<HTML
 
-							<div class="grid-x grid-margin-x align-middle">
+							<div class="grid-x grid-margin-x grid-margin-y align-middle align-center">
 							
-								<div class="cell small-12 medium-4 large-6 top-border">
+								<div class="cell small-12 medium-10 large-6 top-border">
 
 							    	<h2>{$content_title}</h2>
 
@@ -229,9 +267,9 @@ HTML;
 
 							  	</div>
 
-							 	<div class="cell small-12 medium-8 large-6">
+							 	<div class="cell small-12 medium-10 large-6">
 
-							    	<img src="{$content_img_url}"/>
+							    	<img src="{$content_img_url}" alt="{$content_img_alt}"/>
 
 							  	</div>
 
@@ -251,7 +289,7 @@ HTML;
 
 			$content_block = <<<HTML
 
-			<section class="white-bg">
+			<section class="white-bg normal-pad">
 
       			<div class="grid-container">
 
@@ -263,6 +301,78 @@ HTML;
 
 HTML;
 
+			###
+			###	Partners Block
+			###
+			if( have_rows('partners_block') ){
+
+				while( have_rows('partners_block') ){
+					the_row();
+
+					if( have_rows('partners') ){
+					$partners = '';
+
+						while( have_rows('partners') ){
+							the_row();
+
+							$partner_name = get_sub_field('partner_name');
+							$partner_website = get_sub_field('partner_website');
+							$partner_logo = get_sub_field('partner_logo');
+							if( !empty($partner_logo) ) {
+
+								$partner_img_url = $partner_logo['url'];
+								$partner_img_alt = $partner_logo['alt'];
+
+							}
+
+							$partners .= <<<HTML
+							<div class="cell text-center">
+
+								<a href="{$partner_website}" target="_blank">
+
+									<img src="{$partner_img_url}" alt="{$partner_img_alt}" />
+
+								</a>
+
+							</div>
+
+HTML;
+
+						}
+
+					}
+
+				}
+
+			}
+
+			$partners_block = <<<HTML
+
+			<div class="grid-container normal-pad">
+
+				<div class="grid-x text-center">
+
+					<div class="cell small-12">
+
+						<h2>Proud Partners</h2>
+
+					</div>
+
+				</div>
+      
+      			<div class="grid-x grid-margin-x small-up-1 medium-up-3 large-up-3">
+
+      				{$partners}
+
+      			</div>
+
+      		</div>
+
+HTML;
+
+
+
+
 
 			/**
 			 * The following does all of the actual drawing
@@ -270,7 +380,9 @@ HTML;
 			echo <<<HTML
 				{$header_block}
 				{$featured_content_block}
+				{$mission_statement_block}
 				{$content_block}
+				{$partners_block}
 
 HTML;
 

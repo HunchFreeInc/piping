@@ -2,7 +2,7 @@
 use Com\Hunchfree\Wp\Themes\Hffoundation as Hffoundation;
 
 /*
-	Template Name: Our Story Page Template
+	Template Name: Products
 */
 
 get_header();
@@ -34,6 +34,7 @@ try {
             $post_id = get_the_ID();
             $css_classes = implode(' ', get_post_class());
             $post_type = get_post_type( $post );
+            $title = get_the_title();
 
             # We are drawing the entire post.
 
@@ -64,9 +65,9 @@ try {
 			
 			 <div class="grid-container">
       
-                  <div class="grid-x grid-margin-x header about-bg align-middle align-center" style="background: url(' {$header_img_url} '); background-size: cover;">
+                  <div class="grid-x grid-margin-x header careers-bg align-middle align-center text-center" style="background: url(' {$header_img_url} '); background-size: cover;">
                   
-                    <div class="large-8 medium-10 small-12 cell content white-text text-center">
+                    <div class="large-8 medium-10 small-12 cell content white-text">
             
                       <h1>{$header_title}</h1>
             
@@ -79,7 +80,6 @@ try {
             </div>
 
 HTML;
-
 
             ###
             ### Content Block
@@ -97,8 +97,6 @@ HTML;
 
                             $content_title = get_sub_field('content_title');
                             $content_body_text = get_sub_field('content_body_text');
-                            $content_button_text = get_sub_field('content_button_text');
-                            $content_button_link = get_sub_field('content_button_link');
 
                             $content_image = get_sub_field('content_image');
                             if( !empty($content_image) ) {
@@ -114,13 +112,13 @@ HTML;
 
                             <div class="grid-x grid-margin-x grid-margin-y align-center top-pad">
 
-                                <div class="cell small-12 medium-10 text-center large-6 small-order-2 large-order-1">
+                                <div class="cell small-12 medium-10 large-6 medium-order-2 large-order-1">
 
-                                    <img src="{$content_img_url}" alt="{$content_img_alt}"/>
+                                    <img src="{$content_img_url}"/>
 
                                 </div>
 
-                                <div class="cell small-12 medium-10 large-6 top-border small-order-1 large-order-2">
+                                <div class="cell small-12 medium-10 large-6 top-border small-order-1 medium-order-2">
 
                                     <h2>{$content_title}</h2>
 
@@ -136,7 +134,7 @@ HTML;
 
                             $content .= <<<HTML
 
-                            <div class="grid-x grid-margin-x grid-margin-y align-center">
+                            <div class="grid-x grid-margin-x grid-margin-y align-middle align-center">
                             
                                 <div class="cell small-12 medium-10 large-6 top-border">
 
@@ -146,9 +144,9 @@ HTML;
 
                                 </div>
 
-                                <div class="cell text-center small-12 medium-10 large-6">
+                                <div class="cell small-12 medium-10 large-6">
 
-                                    <img src="{$content_img_url}" alt="{$content_img_alt}"/>
+                                    <img src="{$content_img_url}"/>
 
                                 </div>
 
@@ -184,6 +182,25 @@ HTML;
             ###
             ### Footer Block
             ###
+            if( have_rows('footer_block') ){
+
+                while( have_rows('footer_block') ){
+                    the_row();
+
+                    $footer_title = get_sub_field('footer_title');
+                    $footer_content = get_sub_field('footer_content');
+                    $background_image = get_sub_field('background_image');
+
+                    if( !empty($background_image) ) {
+
+                        $footer_image_url = $background_image['url'];
+                        $footer_image_alt = $background_image['alt'];
+
+                    }
+
+                }
+
+            }
 
             $footer_block = <<<HTML
             
@@ -191,13 +208,13 @@ HTML;
 
               <div class="grid-container">
         
-                <div class="grid-x grid-margin-x align-center pipes-bg text-center align-middle foot-callout" style="background: url(' https://piping.hunchfree.com/wp-content/uploads/2018/01/pipes.jpg '); background-size: cover;">
+                <div class="grid-x grid-margin-x align-center pipes-bg text-center align-middle foot-callout" style="background: url(' {$footer_image_url} '); background-size: cover;">
         
                   <div class="cell large-8 medium-10 small-12 white-text content">
         
-                    <h2>Let's Talk!</h2>
+                    <h2>{$footer_title}</h2>
         
-                    <p>Give us a call at any one of our locations to talk with one of our experienced sales representatives about your pipe, valve or fittings needs.</p>
+                    <p>{$footer_content}</p>
 
                     <a href="/contact/" class="button white">Contact Us</a>
         
@@ -219,7 +236,7 @@ HTML;
             echo <<<HTML
 				{$header_block}
 				{$content_block}
-				{$footer_block}
+                {$footer_block}
 
 HTML;
 

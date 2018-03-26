@@ -2,7 +2,7 @@
 use Com\Hunchfree\Wp\Themes\Hffoundation as Hffoundation;
 
 /*
-	Template Name: Markets Page Template
+	Template Name: Markets - Solutions - Products
 */
 
 get_header();
@@ -34,6 +34,7 @@ try {
             $post_id = get_the_ID();
             $css_classes = implode(' ', get_post_class());
             $post_type = get_post_type( $post );
+            $title = get_the_title();
 
             # We are drawing the entire post.
 
@@ -64,9 +65,9 @@ try {
 			
 			 <div class="grid-container">
       
-                  <div class="grid-x grid-margin-x header careers-bg align-bottom" style="background: url(' {$header_img_url} ');">
+                  <div class="grid-x grid-margin-x header careers-bg align-middle align-center text-center" style="background: url(' {$header_img_url} '); background-size: cover;">
                   
-                    <div class="large-6 cell content white-text top-border-white">
+                    <div class="large-8 medium-10 small-12 cell content white-text">
             
                       <h1>{$header_title}</h1>
             
@@ -79,62 +80,6 @@ try {
             </div>
 
 HTML;
-
-
-            ###
-            ### Content Block
-            ###
-            if( have_rows('content_block') ){
-
-                while( have_rows('content_block') ){
-                    the_row();
-
-                    $content_title = get_sub_field('content_title');
-                    $content_body_text = get_sub_field('content_body_text');
-
-                    $content_image = get_sub_field('content_image');
-                    if( !empty($content_image) ) {
-
-                        $content_img_url = $content_image['url'];
-                        $content_img_alt = $content_image['alt'];
-
-                    }
-
-
-                    $content_block = <<<HTML
-                                
-                         <section class="white-bg">
-
-                          <div class="grid-container">
-                    
-                            <div class="grid-x grid-margin-x grid-margin-y align-middle">
-                    
-                              <div class="cell small-12 medium-6 large-6 top-border medium-order-2">
-                    
-                                <h2>{$content_title}</h2>
-                    
-                                <p>{$content_body_text}</p>
-                    
-                              </div>
-                    
-                              <div class="cell small-12 medium-6 large-6 medium-order-1">
-                    
-                                <img src="{$content_img_url}">
-                    
-                              </div>
-                    
-                            </div>
-                    
-                          </div>
-                    
-                        </section>
-
-HTML;
-
-                }
-
-            }
-
 
             ###
             ### Content Sections Block
@@ -168,7 +113,7 @@ HTML;
 
                               <a href="{$button_link}">
                     
-                                <div class="card" style="background: url('{$section_background_img}'); background-size: cover;">
+                                <div class="card text-center" style="background: url('{$section_background_img}'); background-size: cover;">
                     
                                   <div class="card-content">
                     
@@ -194,17 +139,85 @@ HTML;
             }
 
             $sections_block = <<<HTML
-            
-              <div class="grid-container box-pad">
 
-                <div class="grid-x grid-margin-x small-up-1 medium-up-3 large-up-3 align-center">
+            <section class="white-bg normal-pad">
+
+                <div class="grid-container">
+
+                    <div class="grid-x grid-margin-x text-center">
+
+                        <div class="cell small-12">
+
+                            <h2>Featured {$title}</h2>
+
+                        </div>
+
+                    </div>
+
+                </div>
+            
+                <div class="grid-container box-pad">
+
+                    <div class="grid-x grid-margin-x small-up-1 medium-up-2 large-up-3 align-center">
                 
-                {$content}
+                        {$content}
+      
+                    </div>
       
                 </div>
-      
-              </div>
 
+            </section>
+
+HTML;
+
+
+            ###
+            ### Footer Block
+            ###
+            if( have_rows('footer_block') ){
+
+                while( have_rows('footer_block') ){
+                    the_row();
+
+                    $footer_title = get_sub_field('footer_title');
+                    $footer_content = get_sub_field('footer_content');
+                    $background_image = get_sub_field('background_image');
+
+                    if( !empty($background_image) ) {
+
+                        $footer_image_url = $background_image['url'];
+                        $footer_image_alt = $background_image['alt'];
+
+                    }
+
+                }
+
+            }
+
+            $footer_block = <<<HTML
+            
+            <section class="">
+
+              <div class="grid-container">
+        
+                <div class="grid-x grid-margin-x align-center pipes-bg text-center align-middle foot-callout" style="background: url(' {$footer_image_url} '); background-size: cover;">
+        
+                  <div class="cell large-8 medium-10 small-12 white-text content">
+        
+                    <h2>{$footer_title}</h2>
+        
+                    <p>{$footer_content}</p>
+
+                    <a href="/contact/" class="button white">Contact Us</a>
+        
+                  </div>
+        
+                </div>
+            
+              </div>
+        
+            </section>
+                    
 HTML;
 
 
@@ -214,8 +227,8 @@ HTML;
              */
             echo <<<HTML
 				{$header_block}
-				{$content_block}
 				{$sections_block}
+                {$footer_block}
 
 HTML;
 

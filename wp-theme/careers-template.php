@@ -64,9 +64,9 @@ try {
 			
 			 <div class="grid-container">
       
-                  <div class="grid-x grid-margin-x header careers-bg align-bottom" style="background: url(' {$header_img_url} ');">
+                  <div class="grid-x grid-margin-x header careers-bg align-middle align-center" style="background: url(' {$header_img_url} '); background-size: cover;">
                   
-                    <div class="large-6 cell content white-text top-border-white">
+                    <div class="large-8 medium-10 smal-12 text-center cell content white-text">
             
                       <h1>{$header_title}</h1>
             
@@ -114,19 +114,19 @@ HTML;
                                 
                                 <div class="grid-x grid-margin-x top-pad">
                         
-                                  <div class="cell small-12 medium-4 large-6 top-border">
+                                  <div class="cell small-12 medium-10 large-6 top-border">
                         
                                     <h2>{$content_title}</h2>
                         
                                     <p>{$content_body_text}</p>
                         
-                                    <a href="{$content_button_link}" class="button red">{$content_button_text}</a>
+                                    <a href="{$content_button_link}" target="_blank" class="button red">{$content_button_text}</a>
                         
                                   </div>
                         
-                                  <div class="cell small-12 medium-8 large-6">
+                                  <div class="cell small-12 medium-10 large-6">
                         
-                                    <img src="{$content_img_url}"/>
+                                    <img src="{$content_img_url}" alt="{$content_img_alt}"/>
                         
                                   </div>
                         
@@ -138,21 +138,21 @@ HTML;
 
                                 $content .= <<<HTML
                                 
-                                 <div class="grid-x grid-margin-x">
+                                 <div class="grid-x grid-margin-x align-center">
         
-                                  <div class="cell small-12 medium-6 large-6 top-border medium-order-2 small-order-1">
+                                  <div class="cell small-12 medium-10 large-6 top-border large-order-2 small-order-1">
                                 
                                     <h2>{$content_title}</h2>
                                 
                                     <p>{$content_body_text}</p>
                                 
-                                    <a href="{$content_button_link}" class="button red">{$content_button_text}</a>
+                                    <a href="{$content_button_link}" target="_blank" class="button red">{$content_button_text}</a>
                                 
                                   </div>
                                 
-                                  <div class="cell small-12 medium-6 large-6">
+                                  <div class="cell small-12 medium-10 large-6 large-order-1 small-order-2">
                                 
-                                    <img src="{$content_img_url}"/>
+                                    <img src="{$content_img_url}" alt="{$content_img_alt}"/>
                                 
                                   </div>
                                 
@@ -216,7 +216,7 @@ HTML;
         
                 <div class="grid-x grid-margin-x align-center pipes-bg text-center align-middle" style="background: url(' {$footer_image_url} ');">
         
-                  <div class="cell large-8 medium-8 small-10 white-text content">
+                  <div class="cell large-8 medium-10 small-12 white-text content">
         
                     <h2>{$footer_title}</h2>
         
