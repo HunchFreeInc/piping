@@ -74,7 +74,7 @@ if ( is_user_logged_in() && current_user_can('switch_themes') ) {
 <div class="row-expanded exceptions" style="background-color: #EFEFEF; padding: 1em 0;">
 	<div class="row">
 		<div class="columns">
-			<p><b>Admin Notices:</b> Only logged in administrators see this content.</p>
+			<p><b>Admin Notices:</b> Only logged in admins see this content. Are you an admin? Blink once for yes or once for no.</p>
 		</div>
 		{$notice_list}
 		{$warning_list}
